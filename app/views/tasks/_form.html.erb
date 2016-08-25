@@ -1,0 +1,37 @@
+
+
+<%= form_for @task, remote: true do |f| %>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :due %><br>
+    <%= f.datetime_select :due %>
+  </div>
+  <div class="field">
+    <%= f.label :strict %><br>
+    <%= f.number_field :strict %>
+  </div>
+  <div class="field">
+    <%= f.label :duration %><br>
+    <%= f.datetime_select :duration %>
+  </div>
+  <div class="field">
+    <%= f.label :scheduled %><br>
+    <%= f.datetime_select :scheduled %>
+  </div>
+  <div class="field">
+    <%= f.label :complete %><br>
+    <%= f.number_field :complete %>
+  </div>
+  
+  <%= f.fields_for :task_categories do |builder| %>
+    <%= render "nested_fields", f: builder %>
+  <% end %>
+  <%= link_to_add_categories "Add Category", f, :task_categories %> 
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

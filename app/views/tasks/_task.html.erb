@@ -1,0 +1,15 @@
+<tr>
+  <td><%= task.name %></td>
+  <td><%= task.due.strftime("%-m/%-d/%y") %></td>
+  <td><%= task.scheduled.strftime("%-m/%-d/%y") %></td>
+  <td>
+    <%if task.complete == 1 %>
+      <span class="glyphicon glyphicon-ok"></span>
+    <%end%>
+  </td>
+
+  <td><%= link_to 'Show', task %></td>
+  <td><%= link_to 'Edit', edit_task_path(task) %></td>
+  <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>
+

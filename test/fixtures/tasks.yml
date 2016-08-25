@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  due: 2016-07-12 16:20:58
+  strict: 1
+  duration: 2016-07-12 16:20:58
+  scheduled: 2016-07-12 16:20:58
+  complete: 1
+
+two:
+  name: MyString
+  due: 2016-07-12 16:20:58
+  strict: 1
+  duration: 2016-07-12 16:20:58
+  scheduled: 2016-07-12 16:20:58
+  complete: 1

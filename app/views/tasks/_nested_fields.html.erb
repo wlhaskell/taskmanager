@@ -1,0 +1,6 @@
+<div>
+	<%= f.collection_select(:category_id, Category.all, :id, :name, include_blank: true) %>
+	<%= f.hidden_field :_destroy %>
+	<button type="button" class ="remove_field" style="display:inline">X</button>
+</div>
+

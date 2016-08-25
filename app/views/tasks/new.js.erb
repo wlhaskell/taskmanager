@@ -1,0 +1,14 @@
+$('#task-form').html("<%= j (render 'form') %>");
+$('#task-form').slideDown(350);
+
+$(".remove_field").click(function(){
+	$(this).parent().hide();
+	$(this).prev('input[type=hidden]').val('1');
+});
+
+$(".add_categories").click(function(){
+	time = new Date().getTime()
+	regexp = new RegExp($(this).data('id'), 'g')
+	$(this).before($(this).data('fields').replace(regexp, time))
+	event.preventDefault()
+});
